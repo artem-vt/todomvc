@@ -467,11 +467,11 @@ describe('TodoMVC', function () {
 
       cy.get('.clear-completed').click()
       cy.get('@todos').should('have.length', 2)
-      cy.get('@todos')
+      cy.get('.todo-list').find("li")
       .eq(0)
       .should('contain', TODO_ITEM_ONE)
 
-      cy.get('@todos')
+      cy.get('.todo-list').find("li")
       .eq(1)
       .should('contain', TODO_ITEM_THREE)
     })
